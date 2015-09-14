@@ -11,9 +11,13 @@ typedef struct {
 
 //如果我们自己定义的结构体包装
     Date date={2014,2,28};
+    
     char *type=@encode(Date);
+    
     NSValue *value3=[NSValue value:&date withObjCType:type];//第一参数传递结构体地址，第二个参数传递类型字符串
+    
     NSArray *array2=[NSArray arrayWithObject:value3];
+    
     NSLog(@"%@",array2);
     /*结果：
      (
